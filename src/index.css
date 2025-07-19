@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Be Vietnam', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased bg-white text-black;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      cursor: none;
+    }
+
+    a, button {
+      cursor: none !important;
+    }
+  }
+}
+
+.custom-cursor {
+  display: none;
+}
+
+.cursor-dot {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .custom-cursor {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+  }
+
+  .custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+  }
+
+  .custom-cursor.on-dark {
+    background: white;
+  }
+
+  .cursor-dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    background: black;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s, background-color 0.3s;
+  }
+
+  .cursor-dot.on-dark {
+    background: white;
+  }
+}
+
+.latex-content {
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.latex-content .katex {
+  font-size: 1.1em;
+}
