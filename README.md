@@ -18,7 +18,7 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 - **Styling**: Tailwind CSS
 - **Build Tool**: Vite
 - **Icons**: Lucide React
-- **Deployment**: Firebase Hosting
+- **Deployment**: Netlify
 - **Form Handling**: Formspree
 
 ## 📦 Installation
@@ -80,13 +80,21 @@ npm run build        # Build for production
 npm run preview      # Preview production build
 ```
 
-### Deployment
-The project is configured for Firebase Hosting:
+### Netlify Deployment
 
-```bash
-npm run build
-firebase deploy
-```
+#### Option 1: Git Integration (Recommended)
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Connect your repository to Netlify
+3. Set build command: `npm run build`
+4. Set publish directory: `dist`
+5. Deploy automatically on every push
+
+#### Option 2: Manual Deployment
+1. Build the project: `npm run build`
+2. Drag and drop the `dist` folder to Netlify
+
+
+Or deploy automatically by connecting your Git repository to Netlify.
 
 ## 🎨 Customization
 
