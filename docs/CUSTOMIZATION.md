@@ -154,12 +154,14 @@ You can replace Formspree with:
 The build output (`dist/`) can be deployed to:
 - Netlify
 - Vercel
-- GitHub Pages
+- GitHub Pages  
 - Any static hosting service
 
-## 📱 SEO & Meta Tags
-
-### Basic SEO
+### Netlify (Recommended)
+1. Connect your Git repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy automatically on every push
 Update meta tags in `index.html`:
 - Title tag
 - Description
