@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Navigation } from './components/layout/Navigation';
 import { Hero } from './components/sections/Hero';
 import { About } from './components/sections/About';
@@ -36,8 +36,8 @@ function App() {
         const bg = window.getComputedStyle(element).backgroundColor;
         setIsOnDarkBg(
           bg === 'rgb(0, 0, 0)' || 
-          element.closest('section')?.classList.contains('bg-black') ||
-          element.closest('footer')?.classList.contains('bg-black')
+          (element.closest('section')?.classList.contains('bg-black') ?? false) ||
+          (element.closest('footer')?.classList.contains('bg-black') ?? false)
         );
       }
     };
