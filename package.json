@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --project config/tsconfig.app.json && vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview",
-    "type-check": "tsc --project config/tsconfig.app.json --noEmit",
+    "type-check": "tsc --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
